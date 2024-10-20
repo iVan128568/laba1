@@ -1,8 +1,7 @@
 # TODO Напишите функцию для поиска индекса товара
 
 def find(arr, elem):
-    findd = [i for i in range(len(arr)) if arr[i] == elem]
-    return findd[0] if len(findd) else None
+    return arr.index(elem) if elem in arr else None
 
 
 
