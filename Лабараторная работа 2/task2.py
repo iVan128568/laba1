@@ -6,13 +6,9 @@ money_capital = 0
 
 # TODO Рассчитайте подушку безопасности, чтобы протянуть 10 месяцев без долгов
 
-count = months
-while 1:
-    money_capital += salary
-    money_capital -= spend
+for i in range(months):
+    money_capital -= salary
+    money_capital += spend
     spend *= (1 + increase)
-    count -= 1
-    if count == 0:
-        break
 
-print(f"Подушка безопасности, чтобы протянуть {months} месяцев без долгов:", int(-money_capital))
+print(f"Подушка безопасности, чтобы протянуть {months} месяцев без долгов:", int(money_capital))
