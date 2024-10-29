@@ -56,16 +56,10 @@ main_str = """
 """
 
 # TODO Распечатайте в столбик букву и её частоту в тексте
-def get_formated(dict_):
-    for key, value in dict_.items():
-        value = round(res_dict[key], 2)
-        value = str(value).ljust(4, '0')
-        yield key, value
-
 
 res_dict = count_letters(main_str)
 res_dict = calculate_frequency(res_dict, len([i for i in main_str if i.isalpha()]))
-for key, value in get_formated(res_dict):
-    print(f"{key}: {value}")
+for key, value in res_dict.items():
+    print(f"{key}: {round(value, 2):.2f}")
 
 
