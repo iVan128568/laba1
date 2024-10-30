@@ -1,16 +1,14 @@
 
-def letters(str_):
-    arr = []
-    str_ = str_.lower()
-    for i in str_:
-        if i.isalpha() and i not in arr:
-            arr.append(i)
-    return arr
 
 
 # TODO  Напишите функцию count_letters
 def count_letters(str_):
-    return {i:(str_.count(i) + str_.count(i.upper())) for i in letters(str_)}
+    count = {}
+    str_ = str_.lower()
+    for letter in str_:
+        if letter.isalpha() and letter not in count:
+            count[letter] = str_.count(letter)
+    return count
 
 
 
